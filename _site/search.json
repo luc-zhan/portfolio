@@ -12,5 +12,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "portfolioacty",
+    "section": "",
+    "text": "Hello! My name is Luc and I am a **Master’s student in Statistics & Risk Economics** at Paris Nanterre University, specializing in Data Science and Actuarial track.\nPassionate about making data speak, this website showcases my academic and personal projects in statistics, econometrics, and data science.\n📬 **Looking for a 1 or 2-year apprenticeship starting September 2026.**\nFeel free to explore my [Projects](projects.qmd) page or check out my [GitHub Profile](https://github.com/luc-zhan)."
   }
 ]
