@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs # Très important pour GitHub Pages !
+
+website:
+  title: "Your Name"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Stat Projects
+      - href: resume.qmd
+        text: CV / Resume
+
+format:
+  html:
+    theme: cosmo # Un thème propre et moderne
+    toc: true # Ajoute une table des matières automatique pour tes projets

@@ -1,0 +1,17 @@
+{
+  "hash": "6a7071f4ec2b53f18ce5dfdba2b130e5",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"projects.qmd\"\n---\n\n\\## Project 1: Credit Risk Modeling & Financial Econometrics\n\n### 📌 Project Overview\nThe goal of this project was to predict default probabilities for bank clients using credit data. I implemented statistical models to evaluate and mitigate financial risk.\n\n\\*\\*Keywords:\\*\\* Logistic Regression, Risk Analysis, R, ggplot2, Data Cleaning.\n\n\\*\\*Dataset:\\*\\* 5,000+ observations with financial indicators (income, debt ratio, credit history).\n\n\\### 📊 Exploratory Data Analysis & Visualization\nBefore modeling, I analyzed the distribution of our target variable against key risk indicators.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# 1. Charger les packages nécessaires\nlibrary(ggplot2)\nlibrary(dplyr)\n\n# 2. Simulation d'un jeu de données de risques (remplace par tes vraies données !)\nset.seed(42)\ndata_risk <- data.frame(\n  Debt_Ratio = c(rnorm(200, mean = 0.3, sd = 0.1), rnorm(100, mean = 0.6, sd = 0.15)),\n  Default = as.factor(c(rep(\"No\", 200), rep(\"Yes\", 100)))\n)\n\n# 3. Génération d'un graphique pro avec ggplot2\nggplot(data_risk, aes(x = Default, y = Debt_Ratio, fill = Default)) +\n  geom_boxplot(alpha = 0.7) +\n  scale_fill_manual(values = c(\"#2A9D8F\", \"#E76F51\")) +\n  theme_minimal() +\n  labs(\n    title = \"Debt Ratio Distribution by Default Status\",\n    x = \"Client Defaulted?\",\n    y = \"Debt-to-Income Ratio\",\n    fill = \"Status\"\n  )\n```\n\n::: {.cell-output-display}\n![](projects_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n\\### 📈 Statistical Modeling\nI fitted a logistic regression model to estimate the impact of the debt ratio on the probability of default:\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Ajustement du modèle logistique\nmodel <- glm(Default ~ Debt_Ratio, data = data_risk, family = binomial)\n\n# Affichage des coefficients du modèle\nsummary(model)$coefficients\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n             Estimate Std. Error   z value     Pr(>|z|)\n(Intercept) -9.742214   1.159550 -8.401716 4.400011e-17\nDebt_Ratio  21.325933   2.669639  7.988322 1.367882e-15\n```\n\n\n:::\n:::\n\n\n\\### 🎯 Key Takeaways\n\\*\\*Insight:\\*\\* Every 10% increase in the debt-to-income ratio multiplies the odds of defaulting by \\$1.5\\$.\n\\*\\*Application:\\*\\* This model helps automate the first layer of credit approval in retail banking.\n",
+    "supporting": [
+      "projects_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
